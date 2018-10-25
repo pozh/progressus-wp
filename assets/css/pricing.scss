@@ -1,0 +1,105 @@
+.section-pricing {
+  .price-plan {
+    position: relative;
+    background: $bg-invert;
+    border-radius: $radius;
+    &.most-popular {
+      background: $color-action;
+    }
+    h2 {
+      font-size: 22px;
+      color: #fff;
+      font-weight: 200;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      text-align: center;
+      padding: 1em 0;
+      margin: 0;
+      &:after {
+        content: ' ';
+        display: block;
+        width: 222px;
+        margin: 20px auto 0;
+        height: 2px;
+        background: white;
+      }
+    }
+    p {
+      color: #fff;
+      color: rgba(255, 255, 255, .7);
+    }
+
+    .price {
+      padding: 8px 0 30px 0;
+      .inside {
+        font-weight: 100;
+        color: white;
+        text-align: center;
+        line-height: 100px;
+        height: 100px;
+        i, sub, sup {
+          font-size: 24px;
+          position: relative;
+          top: -64px;
+          left: -7px;
+          font-style: normal;
+        }
+        sup {
+          font-size: 27px;
+          letter-spacing: 4px;
+          top: -64px;
+          left: 10px;
+          opacity: .6;
+        }
+        sub {
+          letter-spacing: 4px;
+          top: 0px;
+          left: 0px;
+          opacity: .6;
+        }
+        b {
+          letter-spacing: -6px;
+          font-size: 114px;
+          margin-right: -6px;
+          font-weight: 300;
+          margin-left: -5px;
+          color: #fff;
+        }
+        .sub {
+          text-transform: uppercase;
+          font-size: 17px;
+          letter-spacing: 2px;
+          margin-left: -5px;
+        }
+      }
+    }
+
+    .info {
+      background: $bg-accent;
+      padding: 20px;
+      min-height: 7em;
+      p {
+        color: $color-text;
+        line-height: 1.2em;
+      }
+      ul {
+        margin: 30px 0 40px 0;
+        min-height: 10em;
+      }
+      li {
+        padding: 15px 0;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid darken($bg-accent, 7%);
+        line-height: 1.2em;
+        text-align: center;
+      }
+      li:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      li:first-child {
+        border-top: none;
+      }
+    }
+  }
+}

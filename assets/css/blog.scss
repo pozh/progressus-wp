@@ -37,7 +37,7 @@
   }
   a:hover {
     color: $color-muted;
-    opacity: @include 9;
+    opacity: .9;
     text-decoration: none;
   }
 
@@ -50,10 +50,10 @@
     color: #a5a5a5;
     margin: 0 0 15px 0;
     a {
-      opacity: @include 8;
+      opacity: .8;
     }
     a:hover {
-      opacity: @include 8;
+      opacity: .8;
     }
   }
 }

@@ -16,9 +16,9 @@ module.exports = {
 	injectChanges: true,
 
 	// Style options.
-	styleSRC: './assets/css/style.scss', // Path to main .scss file.
+	styleSRC: './assets/css/styles.scss', // Path to main .scss file.
 	styleDestination: './', // Path to place the compiled CSS file. Default set to root folder.
-	outputStyle: 'expanded', // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
+	outputStyle: 'compressed', // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
 	errLogToConsole: true,
 	precision: 10,
 

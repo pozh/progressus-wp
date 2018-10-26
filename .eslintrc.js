@@ -5,12 +5,13 @@ module.exports = {
     es6: true,
     node: true
   },
+  "parser": "babel-eslint",
   extends: ["eslint:recommended", "wordpress"],
   parserOptions: {
     sourceType: "module"
   },
   rules: {
-    indent: ["error", "tab"],
+    indent: ["error", 2],
     quotes: ["error", "single"],
     semi: ["error", "always"]
   }

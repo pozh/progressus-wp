@@ -76,6 +76,7 @@
   background: $bg-head;
   color: $color-head;
   background-size: cover;
+
   .page-title {
     font-family: $font-head;
     color: $color-head;
@@ -84,14 +85,15 @@
     font-size: 45px;
     line-height: 1.25em;
     text-transform: uppercase;
-  }
-  .page-lead {
-    margin: 0;
-    font-weight: 400;
-    line-height: 1.25em;
-    font-size: 25px;
-    color: $color-head;
-    opacity: 0.8;
+
+    small {
+      margin: 0;
+      font-weight: 400;
+      line-height: 1.25em;
+      font-size: 25px;
+      color: $color-head;
+      opacity: 0.8;
+    }
   }
 
   @media (max-width: 480px) {
@@ -99,9 +101,10 @@
     min-height: inherit;
     .page-title {
       font-size: 30px;
-    }
-    .page-lead {
-      font-size: 18px;
+
+      small {
+        font-size: 18px;
+      }
     }
   }
 }

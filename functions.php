@@ -126,6 +126,9 @@ add_action( 'widgets_init', 'progressus_widgets_init' );
  * Enqueue scripts and styles.
  */
 function progressus_scripts() {
+    // Fonts
+    wp_enqueue_style( 'progressus-fonts', '//fonts.googleapis.com/css?family=Raleway:200,400,600|Open+Sans:300,400,700');
+
     // Theme-specific stylesheet
     wp_enqueue_style( 'progressus-base-style', get_template_directory_uri() . "/assets/css/styles.css", false, '1.0', 'all' );
 

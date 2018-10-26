@@ -28,10 +28,13 @@ var webpackConfig = {
     main: jsSourceDir + 'main.js',
     vendor: jsSourceDir + 'vendor.js'
   },
+  externals: {
+    jquery: 'jQuery'
+  },
   resolve: {
     alias: {
-      'jquery': 'node_modules/jquery/dist/jquery.js',
-      'bootstrap': 'node_modules/bootstrap/dist/js/bootstrap.bundle.js'
+      node_modules:  path.resolve(__dirname, 'node_modules'),
+      bootstrap: path.resolve(__dirname, 'node_modules/bootstrap/dist/js/bootstrap.bundle.js')
   }},
   output: {
     path: path.resolve(__dirname, jsDest),

@@ -105,7 +105,7 @@ function progressus_content_width() {
 add_action( 'after_setup_theme', 'progressus_content_width', 0 );
 
 /**
- * Register widget area.
+ * Register widget areas.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
@@ -119,6 +119,30 @@ function progressus_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	// For the footer
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer', 'progressus' ),
+        'id'            => 'footer',
+        'description'   => esc_html__( 'Add footer widgets here.', 'progressus' ),
+        'before_widget' => '<div class="col-12 col-lg footer__widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="footer__widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+
+    // For the extra footer, the very bottom of page
+    register_sidebar( array(
+        'name'          => esc_html__( 'Extra Footer', 'progressus' ),
+        'id'            => 'footer-extra',
+        'description'   => esc_html__( "Nice place to put an extra navigation", 'progressus' ),
+        'before_widget' => '<div class="col-12 col-lg">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="footer-extra__widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+
+
 }
 add_action( 'widgets_init', 'progressus_widgets_init' );
 

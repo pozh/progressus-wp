@@ -6,47 +6,44 @@
  *
  * @package Progressus
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
 
-	<?php progressus_post_thumbnail(); ?>
+    <header class="entry-header head-inner"
+            style="background-image: url(<?php echo get_post_meta( $post->ID, 'post_imageheader', true);?>); background-size: cover;">
+        <div class="container">
+            <div class="row">
+                <?php
+                $post_id = get_the_ID();
+                $post_title = get_post_meta($post_id, 'post_title', true);
+                if (empty($post_title)) $post_title = the_title();
+                $post_caption = get_post_meta($post_id, 'post_caption', true);
+                ?>
+                <h1 class="page-title text-center">
+                    <?php
+                    echo $post_title;
+                    if (!empty($post_caption)) echo "<small>$post_caption</small>";
+                    ?>
+                </h1>
+            </div>
+        </div>
+    </header>
 
-	<div class="entry-content">
+    <?php
+    // TODO: import appropriate header, which one - depends on the type of the page.
+    ?>
+
+    <?php progressus_post_thumbnail(); ?>
+
+	<div class="entry-content content">
 		<?php
 		the_content();
-
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'progressus' ),
 			'after'  => '</div>',
 		) );
 		?>
-	</div><!-- .entry-content -->
+	</div>
 
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-			edit_post_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'progressus' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

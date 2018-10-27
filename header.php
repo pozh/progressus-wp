@@ -23,19 +23,20 @@
 <div id="page" class="site">
     <div class="navbar navbar-expand-lg fixed-top headroom ontop-now animated">
         <div class="container">
-            <div class="navbar-header">
-                <!-- Button for smallest screens -->
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span
-                            class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                    <?php
-                    if(has_custom_logo()) the_custom_logo();
-                    else { ?>
-                        <h1 class="site-title"><?php bloginfo('name'); ?></h1>
-                    <?php } ?>
-                </a>
-            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primary-menu" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+                <?php
+                if (has_custom_logo()) {
+                    $custom_logo_id = get_theme_mod( 'custom_logo' );
+                    $image_url = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                    printf('<img src="%s" alt=""/>', $image_url[0]);
+                }
+                else { ?>
+                    <h1 class="site-title"><?php bloginfo('name'); ?></h1>
+                <?php } ?>
+            </a>
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'primary',

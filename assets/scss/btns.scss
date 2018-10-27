@@ -1,0 +1,42 @@
+.btn {
+  padding: 9px 40px;
+  font-weight: bold;
+  border-radius: $radius;
+}
+
+.btn-lg {
+  padding: 14px 65px;
+}
+
+.btn-default {
+  text-shadow: none;
+  background: $bg-invert;
+  border-color: $bg-invert;
+  color: $color-invert;
+  &:hover, &:focus,
+  &:active, &.active {
+    background: lighten($bg-invert, 10%);
+    border-color: lighten($bg-invert, 10%);
+    color: $color-invert;
+  }
+}
+
+.btn-action.btn-ghost {
+  border-color: $color-action;
+  color: $color-action;
+  background: transparent;
+  &:hover, &:focus, &:active {
+    border-color: $color-action-hover;
+    color: #fff;
+    background: $color-action-hover;
+  }
+}
+
+.btn-rounded {
+  border-radius: 20px;
+}
+
+.input-group .btn {
+  padding-left: 12px;
+  padding-right: 12px;
+}

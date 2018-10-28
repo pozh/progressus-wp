@@ -6,6 +6,9 @@ $bg-medium: #666;
 $bg-invert: #333;
 $bg-head: #1C2A42;
 
+$white: #fff;
+$black: #000;
+
 $color-text: #333;
 $color-muted: #454545;
 $color-contrast: #151515;
@@ -32,3 +35,7 @@ $font-headings: "Open sans", helvetica, "Helvetica Neue", arial;
 
 // Various
 $radius: 3px;
+
+// Navbar
+$navbar-toggler-padding-y:          .35rem;
+$navbar-toggler-padding-x:          .75rem;

@@ -13,25 +13,6 @@
     }
   }
 
-  .navbar-toggle {
-    border-color: transparent;
-    background: transparent;
-    border-radius: $radius;
-    &:hover {
-      background: transparent;
-      border-color: transparent;
-    }
-    .icon-bar {
-      background: $color-text;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .navbar-collapse.collapse.in {
-      background: #fff;
-    }
-  }
-
   .navbar-nav {
     > li > a {
       text-transform: uppercase;
@@ -82,6 +63,22 @@
       margin-top: -8px;
     }
   }
+
+  &-toggler {
+    font-size: 1rem;
+    color: white;
+    line-height: 1;
+    border: 1px solid $white;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 100;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 .navbar-nav .btn {
@@ -96,22 +93,25 @@
 }
 
 .navbar-collapse {
-  border: 0 none;
-  border-top: 0 none;
-  box-shadow: none;
+  @include media-breakpoint-down(md) {
+    @include transition($transition-base);
+    position: absolute;
+    display: block;
+    background: rgba($black, .9);
+    opacity: 0;
+    right: -250px;
+    width: 233px;
+    height: 100vh;
+  }
 
-  ul {
-    @include media-breakpoint-down(md) {
-      text-align: center;
-      width: 100%;
-      padding-bottom: 10px;
-    }
-
-    .btn {
-      @include media-breakpoint-down(md) {
-        max-width: 50%;
-        margin: 0 auto;
-      }
-    }
+  &.show {
+    right: 0;
+    top: 0;
+    opacity: 1;
+    z-index: 10;
+    padding: 80px 15px 15px 15px;
+    text-align: right;
   }
 }
+
+

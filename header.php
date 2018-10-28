@@ -20,12 +20,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
     <div class="navbar navbar-expand-lg fixed-top headroom ontop-now animated">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primary-menu" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
                 <?php
                 if (has_custom_logo()) {
@@ -37,6 +33,9 @@
                     <h1 class="site-title"><?php bloginfo('name'); ?></h1>
                 <?php } ?>
             </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primary-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <?php _e('Menu', 'progressus'); ?>
+            </button>
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'primary',
@@ -44,7 +43,7 @@
                 'depth' => 2, // 1 = no dropdowns, 2 = with dropdowns.
                 'container' => 'div',
                 'container_class' => 'navbar-collapse collapse',
-                'container_id' => 'bs-example-navbar-collapse-1',
+                'container_id' => 'primary-collapse',
                 'menu_class' => 'nav navbar-nav ml-auto',
                 'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
                 'walker' => new WP_Bootstrap_Navwalker(),

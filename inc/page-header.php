@@ -1,6 +1,6 @@
 <?php
 
-class customheaderMetabox
+class progressusCustomHeader
 {
     private $screen = array(
         'post',
@@ -141,6 +141,6 @@ class customheaderMetabox
     }
 }
 
-if (class_exists('customheaderMetabox')) {
-    new customheaderMetabox;
+if (class_exists('progressusCustomHeader')) {
+    new progressusCustomHeader;
 };

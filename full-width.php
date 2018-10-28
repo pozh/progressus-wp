@@ -13,7 +13,7 @@ get_header();
 get_template_part('template-parts/header', 'page');
 ?>
 
-<div id="primary" class="content-area container mt-5">
+<div id="primary" class="content-area">
     <?php
     while (have_posts()) :
         the_post();

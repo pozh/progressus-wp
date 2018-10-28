@@ -130,17 +130,12 @@
 
 /* Section Team
 *******************************/
-.section-team {
-  .photo {
-    border: 5px solid darken($bg-accent, 4%);
-  }
+.people-list__photo {
+  border-radius: 50%;
+  @extend .img-fluid;
+  border: 5px solid darken($bg-accent, 4%);
 }
 
-.section-investors {
-  .photo {
-    border: 5px solid darken($bg-accent, 4%);
-  }
-}
 
 /* Section: Testimonials
 ******************************/

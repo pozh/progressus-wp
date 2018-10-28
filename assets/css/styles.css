@@ -391,7 +391,7 @@ mark,
   .blockquote-footer::before {
     content: "\2014 \00A0"; }
 
-.img-fluid {
+.img-fluid, .people-list__photo {
   max-width: 100%;
   height: auto; }
 
@@ -3066,7 +3066,7 @@ input[type="button"].btn-block {
       align-items: center; }
 
 .navbar-toggler {
-  padding: 0.25rem 0.75rem;
+  padding: 0.35rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
@@ -7546,18 +7546,6 @@ legend {
     padding-top: 15px; }
     .navbar.ontop-now .navbar-nav > li > a {
       color: rgba(255, 255, 255, 0.8); }
-  .navbar .navbar-toggle {
-    border-color: transparent;
-    background: transparent;
-    border-radius: 3px; }
-    .navbar .navbar-toggle:hover {
-      background: transparent;
-      border-color: transparent; }
-    .navbar .navbar-toggle .icon-bar {
-      background: #333; }
-  @media (max-width: 480px) {
-    .navbar .navbar-collapse.collapse.in {
-      background: #fff; } }
   .navbar .navbar-nav > li > a {
     text-transform: uppercase;
     font-weight: bold;
@@ -7593,6 +7581,17 @@ legend {
     height: auto; }
     .navbar .navbar-brand img {
       margin-top: -8px; }
+  .navbar-toggler {
+    font-size: 1rem;
+    color: white;
+    line-height: 1;
+    border: 1px solid #fff;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 100; }
+    .navbar-toggler:active, .navbar-toggler:focus {
+      outline: none; }
 
 .navbar-nav .btn {
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -7603,19 +7602,27 @@ legend {
   .navbar-nav .btn:focus, .navbar-nav .btn:hover {
     border: 1px solid rgba(0, 0, 0, 0.6); }
 
-.navbar-collapse {
-  border: 0 none;
-  border-top: 0 none;
-  box-shadow: none; }
-  @media (max-width: 991.98px) {
-    .navbar-collapse ul {
-      text-align: center;
-      width: 100%;
-      padding-bottom: 10px; } }
-  @media (max-width: 991.98px) {
-    .navbar-collapse ul .btn {
-      max-width: 50%;
-      margin: 0 auto; } }
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    display: block;
+    background: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    right: -250px;
+    width: 233px;
+    height: 100vh; } }
+  @media screen and (max-width: 991.98px) and (prefers-reduced-motion: reduce) {
+    .navbar-collapse {
+      transition: none; } }
+
+.navbar-collapse.show {
+  right: 0;
+  top: 0;
+  opacity: 1;
+  z-index: 10;
+  padding: 80px 15px 15px 15px;
+  text-align: right; }
 
 .btn {
   padding: 9px 40px;
@@ -7651,11 +7658,6 @@ legend {
   padding-left: 12px;
   padding-right: 12px; }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  margin: 30px 0 15px 0;
-  line-height: 1.1; }
-
 h1, .h1 {
   font-size: 52px; }
 
@@ -7690,11 +7692,6 @@ h5, .h5 {
   h5, .h5 {
     font-size: 16px;
     margin-bottom: 15px; } }
-
-.title {
-  font-family: Raleway, "Open sans", helvetica, arial;
-  color: #454545;
-  margin-bottom: 50px; }
 
 p {
   margin: 0 0 20px 0; }
@@ -7827,10 +7824,8 @@ hr {
 
 /* Section Team
 *******************************/
-.section-team .photo {
-  border: 5px solid #ebedef; }
-
-.section-investors .photo {
+.people-list__photo {
+  border-radius: 50%;
   border: 5px solid #ebedef; }
 
 /* Section: Testimonials

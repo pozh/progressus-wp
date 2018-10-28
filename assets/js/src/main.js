@@ -22,9 +22,7 @@ headroom.init( headroomOptions );
 $( window ).scroll( function() {
   if ( 140 <  $( this ).scrollTop() ) {
     $( '.headroom' ).removeClass( 'ontop-now' );
-    $( '.navbar-dual' ).removeClass( 'navbar-inverse' );
   } else {
     $( '.headroom' ).addClass( 'ontop-now' );
-    $( '.navbar-dual' ).addClass( 'navbar-inverse' );
   }
 });

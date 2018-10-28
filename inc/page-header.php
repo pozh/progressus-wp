@@ -8,9 +8,19 @@ class progressusCustomHeader
     );
     private $meta_fields = array(
         array(
-            'label' => 'Add Image Header',
+            'label' => 'Background Image',
             'id' => 'post_imageheader',
             'type' => 'media',
+        ),
+        array(
+            'label' => 'Page header - Title',
+            'id' => 'post_headtitle',
+            'type' => 'text',
+        ),
+        array(
+            'label' => 'Page header - Caption',
+            'id' => 'post_headcaption',
+            'type' => 'text',
         ),
     );
 

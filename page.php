@@ -18,7 +18,7 @@ get_template_part('template-parts/header', 'page');
 $content_class = is_active_sidebar('sidebar-1') ? 'main-content' : '';
 ?>
 
-<div id="primary" class="content-area container mt-5">
+<div id="primary" class="content-area container mt-5 page-content">
     <div class="row">
         <div class="<?php echo $content_class; ?>">
         <?php

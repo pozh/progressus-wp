@@ -117,7 +117,7 @@
 /* Simple page title */
 .page-title {
   font-family: $font-titles;
-  color: $color-contrast;
+  color: $gray-900;
   margin: 120px 0 10px 0;
   font-weight: 400;
   font-size: 72px;
@@ -200,7 +200,7 @@
     line-height: 50px;
     span {
       display: block;
-      color: $color-accent;
+      color: $gray-800;
       font-size: 23px;
       font-weight: normal;
     }

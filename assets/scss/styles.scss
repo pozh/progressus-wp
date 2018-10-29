@@ -92,24 +92,6 @@
   }
 }
 
-/* Panels
-******************************/
-.panel-box {
-  background: $bg-accent;
-  border-radius: $radius;
-  border: 0 none;
-  .panel-thumbnail {
-    border: 0 none;
-  }
-  .panel-thumbnail img {
-    border-radius: $radius $radius 0 0;
-  }
-}
-
-
-/*************************************************************************
-                        Section-specific styles
-**************************************************************************/
 
 /* Section Team
 *******************************/
@@ -125,11 +107,11 @@
   display: block;
   margin-top: 7px;
   font-size: 14px;
-  color: lighten($body-color, 40%);
+  color: $gray-400;
   margin-bottom: 1rem;
 
   a {
-    color: lighten($body-color, 40%);
+    color: $gray-400;
     text-decoration: none;
   }
   a:hover {
@@ -137,68 +119,83 @@
   }
 }
 
-.person-about {
-  display: block;
-  margin-top: 7px;
-  font-size: 14px;
-  color: $color-accent;
-  font-weight: bold;
-}
-
 
 /* Section: Testimonials
 ******************************/
-.section-testimonials {
-  padding-bottom: 100px !important;
+.testimonials {
+  padding-bottom: 40px !important;
+
   .carousel-indicators {
     bottom: -60px;
     z-index: auto;
+
     li {
-      border: none;
-      margin: 1px;
-      background: darken($bg-accent, 14%);
-    }
-    li.active {
-      background: $color-titles;
-      border: none;
+      background: $gray-400;
       width: 10px;
       height: 10px;
-      margin: 1px;
+      border-radius: 50%;
+      + li {
+        margin-left: 7px;
+      }
+
+      &:before,
+      &:after {
+        display: none;
+      }
+
+      &.active {
+        background: $primary;
+        border: none;
+        margin: 1px;
+      }
+
     }
   }
+
   .title {
     margin-bottom: 60px;
   }
   .item {
+    display: none;
+
+    &:first-of-type {
+      display: flex;
+    }
+
     .profile {
       img {
         border-radius: 50%;
         border: 9px solid rgba(0, 0, 0, .1);
       }
     }
+
     .content {
     }
+
     blockquote {
-      font-size: 20px;
       font-weight: 300;
       border-left: 0;
       padding: 0;
       position: relative;
+
+      .fa {
+        position: absolute;
+        color: darken($bg-accent, 14%);
+        font-size: 22px;
+        left: -45px;
+      }
     }
-    blockquote .fa {
-      position: absolute;
-      color: darken($bg-accent, 14%);
-      font-size: 22px;
-      left: -45px;
-    }
+
     .source {
       font-weight: bold;
     }
+
     .source .title {
       font-size: 16px;
       color: $body-color;
     }
-    @media (max-width: 480px) {
+
+    @include media-breakpoint-down(sm) {
       div {
         text-align: center;
       }

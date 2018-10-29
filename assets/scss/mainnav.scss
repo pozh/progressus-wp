@@ -8,6 +8,20 @@
     background: transparent;
     padding-top: 15px;
 
+    .navbar-nav {
+      > li > a,
+      > .open ul > a {
+        color: rgba($white, .8);
+      }
+
+      > li > a:hover,
+      > li > a:focus,
+      > .open > a:hover,
+      > .open > a:focus,
+      > .current-menu-item > a {
+        color: $white;
+      }
+    }
   }
 
   .navbar-nav {
@@ -15,24 +29,16 @@
       text-transform: uppercase;
       font-weight: bold;
       font-size: 13px;
+      color: $body-color;
     }
     > li > a,
     > .open ul > a {
-      color: rgba($white, .8);
       background: none;
-    }
-
-    > li > a:hover,
-    > li > a:focus,
-    > .open > a:hover,
-    > .open > a:focus,
-    > .current-menu-item > a {
-      background: none;
-      color: $white;
     }
 
     > .current-menu-item > a {
       position: relative;
+      color: $primary;
 
       &:after {
         content: '';

@@ -1,18 +1,22 @@
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
 // Color Scheme
-$bg-body: #fff;
-$bg-accent: #f6f7f8;
-$bg-accent-inverted: #211F25;
-$bg-medium: #666;
-$bg-invert: #333;
-$bg-head: #1C2A42;
+$bg-body: $white;
+$bg-accent: $gray-100;
+$bg-accent-inverted: $gray-900;
 
-$white: #fff;
-$black: #000;
-
-$body-color: #333;
-$color-muted: #454545;
-$color-contrast: #151515;
-$color-invert: #f0f0f0;
+$body-color: $gray-800;
+$color-muted: $gray-700;
 $color-accent: #3A89C9;
 
 $primary: #DA4453;
@@ -26,20 +30,32 @@ $color-titles: #454545;
 $color-headings: #454545;
 $color-links: $primary;
 
+$bg-head: $gray-900;
+
 // Typography
 $font-family-sans-serif: "Open sans", helvetica, "Helvetica Neue", arial;
 $font-head: Raleway, "Open sans", helvetica, "Helvetica Neue", arial;
 $font-titles: Raleway, "Open sans", helvetica, arial;
-$font-headings: "Open sans", helvetica, "Helvetica Neue", arial;
 
 $font-size-base: 1rem;
 $line-height-base: 1.5;
+
+$headings-font-weight: 400;
 $h1-font-size: $font-size-base * 3.5;
-$h2-font-size: $font-size-base * 2.8;
+$h2-font-size: $font-size-base * 2.2;
 $h3-font-size: $font-size-base * 1.75;
 $h4-font-size: $font-size-base * 1.5;
 $h5-font-size: $font-size-base * 1.25;
 $h6-font-size: $font-size-base;
+
+$display1-size: 6rem;
+$display2-size: 5.5rem;
+$display3-size: 4.5rem;
+$display4-size: 3.5rem;
+$display1-weight: 300;
+$display2-weight: 300;
+$display3-weight: 300;
+$display4-weight: 300;
 
 // Various
 $radius: 3px;
@@ -63,5 +79,5 @@ $spacers: map-merge((
 ), $spacers);
 
 // BUTTONS
-$input-btn-padding-y-lg:      .65rem;
-$input-btn-padding-x-lg:      3.8rem;
+$input-btn-padding-y-lg: .65rem;
+$input-btn-padding-x-lg: 3.8rem;

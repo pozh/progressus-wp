@@ -9,6 +9,12 @@ label {
   color: $gray-600;
 }
 
+.font-weight-light {
+  * {
+    font-weight: $font-weight-light;
+  }
+}
+
 .thin {
   @extend .font-weight-light;
 }

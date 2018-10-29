@@ -2,7 +2,7 @@
 .jumbotron {
   color: $body-color;
   background-color: $bg-accent;
-  padding-top: 40px;
+  padding-top: 50px;
   padding-bottom: 60px;
   margin-bottom: 0;
 }
@@ -12,7 +12,7 @@
 }
 
 .jumbotron.invert {
-  color: $color-invert;
+  color: $gray-100;
   background-color: $bg-accent-inverted;
   border: solid $bg-accent;
   border-width: 10px 0;

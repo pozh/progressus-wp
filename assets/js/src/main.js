@@ -26,3 +26,7 @@ $( window ).scroll( function() {
     $( '.headroom' ).addClass( 'ontop-now' );
   }
 });
+
+$( '.carousel' ).carousel({
+  interval: 2000
+});

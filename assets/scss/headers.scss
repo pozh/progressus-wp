@@ -14,28 +14,6 @@
 
 /* Home header - default */
 .head-default {
-  background: $bg-head url(../images/bg_header.jpg) no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-
-  .lead {
-    font-family: $font-head;
-    font-weight: bold;
-    font-size: 45px;
-    margin: 220px 0 6px 0;
-    color: $color-head;
-    line-height: 1.15em;
-  }
-  .tagline {
-    font-weight: normal;
-    margin-bottom: 25px;
-    font-size: 15px;
-    opacity: .85;
-  }
-  .tagline a {
-    color: #fff;
-  }
-
   .btn {
     font-size: 14px;
   }
@@ -67,8 +45,7 @@
 
 }
 
-/* Secondary pages header */
-.head-inner {
+.hero {
   padding: 140px 0 80px 0;
   min-height: 350px;
   font-family: $font-head;
@@ -88,9 +65,10 @@
     small {
       display: block;
       margin: 8px auto 0 auto;
+      font-family: $font-family-base;
       font-weight: 400;
       line-height: 1.25em;
-      font-size: 25px;
+      font-size: 18px;
       color: $color-head;
       text-transform: none;
       opacity: .8;
@@ -137,16 +115,6 @@
   @media (max-width: 480px) {
     font-size: 48px;
   }
-}
-
-/* Autohide navbar */
-.headroom--unpinned {
-  top: -100px;
-}
-
-.headroom {
-  transition: $transition-base;
-  transition-duration: .4s;
 }
 
 /* Page-specific headers */

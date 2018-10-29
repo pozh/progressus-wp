@@ -1,4 +1,4 @@
-<header class="entry-header head-inner"
+<header class="entry-header hero"
         style="background-image: url(<?php echo get_post_meta( $post->ID, 'post_imageheader', true);?>); background-size: cover;">
     <div class="container">
         <?php

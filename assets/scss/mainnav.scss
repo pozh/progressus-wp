@@ -132,4 +132,13 @@
   }
 }
 
+/* Autohide navbar */
+.headroom--unpinned {
+  top: -100px;
+}
+
+.headroom {
+  transition: $transition-base;
+  transition-duration: .4s;
+}
 

@@ -7447,55 +7447,38 @@ p:last-child {
       min-height: 420px; } }
 
 /* Home header - default */
-.head-default {
-  background: #212529 url(../images/bg_header.jpg) no-repeat;
-  background-size: cover;
-  background-attachment: fixed; }
-  .head-default .lead {
-    font-family: Raleway, "Open sans", helvetica, "Helvetica Neue", arial;
-    font-weight: bold;
-    font-size: 45px;
-    margin: 220px 0 6px 0;
-    color: #fff;
-    line-height: 1.15em; }
-  .head-default .tagline {
-    font-weight: normal;
-    margin-bottom: 25px;
-    font-size: 15px;
-    opacity: .85; }
-  .head-default .tagline a {
-    color: #fff; }
-  .head-default .btn {
-    font-size: 14px; }
-  .head-default .btn-default {
-    text-shadow: none;
-    background: transparent;
-    border-color: rgba(255, 255, 255, 0.5);
-    color: rgba(255, 255, 255, 0.85); }
-    .head-default .btn-default:hover, .head-default .btn-default:focus, .head-default .btn-default:active, .head-default .btn-default.active {
-      color: #fff;
-      background: transparent;
-      border-color: #fff; }
-  @media (max-width: 480px) {
-    .head-default {
-      padding-bottom: 20px; }
-      .head-default .lead {
-        font-size: 22px;
-        margin: 130px 0 20px 0; }
-      .head-default .btn {
-        font-size: 14px;
-        width: 100%;
-        margin-bottom: 10px; } }
+.head-default .btn {
+  font-size: 14px; }
 
-/* Secondary pages header */
-.head-inner {
+.head-default .btn-default {
+  text-shadow: none;
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.85); }
+  .head-default .btn-default:hover, .head-default .btn-default:focus, .head-default .btn-default:active, .head-default .btn-default.active {
+    color: #fff;
+    background: transparent;
+    border-color: #fff; }
+
+@media (max-width: 480px) {
+  .head-default {
+    padding-bottom: 20px; }
+    .head-default .lead {
+      font-size: 22px;
+      margin: 130px 0 20px 0; }
+    .head-default .btn {
+      font-size: 14px;
+      width: 100%;
+      margin-bottom: 10px; } }
+
+.hero {
   padding: 140px 0 80px 0;
   min-height: 350px;
   font-family: Raleway, "Open sans", helvetica, "Helvetica Neue", arial;
   background: #212529;
   color: #fff;
   background-size: cover; }
-  .head-inner .page-title {
+  .hero .page-title {
     font-family: Raleway, "Open sans", helvetica, "Helvetica Neue", arial;
     color: #fff;
     margin: 0px 0 10px 0;
@@ -7503,25 +7486,26 @@ p:last-child {
     font-size: 45px;
     line-height: 1.25em;
     text-transform: uppercase; }
-    .head-inner .page-title small {
+    .hero .page-title small {
       display: block;
       margin: 8px auto 0 auto;
+      font-family: "Open sans", helvetica, "Helvetica Neue", arial;
       font-weight: 400;
       line-height: 1.25em;
-      font-size: 25px;
+      font-size: 18px;
       color: #fff;
       text-transform: none;
       opacity: .8; }
       @media (min-width: 992px) {
-        .head-inner .page-title small {
+        .hero .page-title small {
           max-width: 80%; } }
   @media (max-width: 480px) {
-    .head-inner {
+    .hero {
       padding: 120px 0 60px 0;
       min-height: inherit; }
-      .head-inner .page-title {
+      .hero .page-title {
         font-size: 30px; }
-        .head-inner .page-title small {
+        .hero .page-title small {
           font-size: 18px; } }
 
 /* Simple page title */
@@ -7545,14 +7529,6 @@ p:last-child {
   @media (max-width: 480px) {
     .page-title {
       font-size: 48px; } }
-
-/* Autohide navbar */
-.headroom--unpinned {
-  top: -100px; }
-
-.headroom {
-  transition: all 0.2s ease-in-out;
-  transition-duration: .4s; }
 
 /* Page-specific headers */
 .page-services .head-inner {
@@ -7964,6 +7940,14 @@ p:last-child {
   z-index: 10;
   padding: 80px 15px 15px 15px;
   text-align: right; }
+
+/* Autohide navbar */
+.headroom--unpinned {
+  top: -100px; }
+
+.headroom {
+  transition: all 0.2s ease-in-out;
+  transition-duration: .4s; }
 
 .btn-rounded {
   border-radius: 20px; }

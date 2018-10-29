@@ -36,7 +36,7 @@
       background: none;
     }
 
-    > .current-menu-item > a {
+    .current-menu-item > a {
       position: relative;
       color: $primary;
 
@@ -129,6 +129,10 @@
     z-index: 10;
     padding: 80px 15px 15px 15px;
     text-align: right;
+
+    .current-menu-item > a:after {
+      display: none;
+    }
   }
 }
 

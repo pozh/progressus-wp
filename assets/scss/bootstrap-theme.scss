@@ -1,6 +1,6 @@
 /* Jumbotron */
 .jumbotron {
-  color: $color-text;
+  color: $body-color;
   background-color: $bg-accent;
   padding-top: 40px;
   padding-bottom: 60px;
@@ -17,7 +17,7 @@
   border: solid $bg-accent;
   border-width: 10px 0;
   .title {
-    color: $color-action;
+    color: $primary;
   }
 }
 

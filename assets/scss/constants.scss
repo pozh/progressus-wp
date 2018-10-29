@@ -9,14 +9,13 @@ $bg-head: #1C2A42;
 $white: #fff;
 $black: #000;
 
-$color-text: #333;
+$body-color: #333;
 $color-muted: #454545;
 $color-contrast: #151515;
 $color-invert: #f0f0f0;
 $color-accent: #3A89C9;
 
-$color-action: #DA4453;
-$color-action-hover: #E72B3E;
+$primary: #DA4453;
 $color-success: #94BA65;
 $color-info: #9CC4E4;
 $color-warning: #F0AD4E;
@@ -25,17 +24,44 @@ $color-danger: #EB3729;
 $color-head: #fff;
 $color-titles: #454545;
 $color-headings: #454545;
-$color-links: $color-action;
-$color-links-hover: $color-action-hover;
+$color-links: $primary;
 
+// Typography
 $font-family-sans-serif: "Open sans", helvetica, "Helvetica Neue", arial;
 $font-head: Raleway, "Open sans", helvetica, "Helvetica Neue", arial;
 $font-titles: Raleway, "Open sans", helvetica, arial;
 $font-headings: "Open sans", helvetica, "Helvetica Neue", arial;
 
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+$h1-font-size: $font-size-base * 3.5;
+$h2-font-size: $font-size-base * 2.8;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
 // Various
 $radius: 3px;
 
 // Navbar
-$navbar-toggler-padding-y:          .35rem;
-$navbar-toggler-padding-x:          .75rem;
+$navbar-toggler-padding-y: .35rem;
+$navbar-toggler-padding-x: .75rem;
+
+// Spacing
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge((
+        0: 0,
+        1: ($spacer * .25),
+        2: ($spacer * .5),
+        3: $spacer,
+        4: ($spacer * 1.5),
+        5: ($spacer * 3),
+        6: ($spacer * 4),
+        7: ($spacer * 5),
+), $spacers);
+
+// BUTTONS
+$input-btn-padding-y-lg:      .65rem;
+$input-btn-padding-x-lg:      3.8rem;

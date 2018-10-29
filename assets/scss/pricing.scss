@@ -4,7 +4,7 @@
     background: $bg-invert;
     border-radius: $radius;
     &.most-popular {
-      background: $color-action;
+      background: $primary;
     }
     h2 {
       font-size: 22px;
@@ -79,7 +79,7 @@
       padding: 20px;
       min-height: 7em;
       p {
-        color: $color-text;
+        color: $body-color;
         line-height: 1.2em;
       }
       ul {

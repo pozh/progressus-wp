@@ -6,3 +6,26 @@
 .sidebar {
   @extend .col-lg-4;
 }
+
+// Content
+p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+// ELEMENTOR
+.elementor-section {
+  margin: 25px 0;
+  @include media-breakpoint-up(sm) {
+    margin: $spacer*4 0 $spacer*2 0;
+  }
+}
+
+.elementor-column-gap-default>
+.elementor-row>
+.elementor-column>
+.elementor-element-populated {
+  padding-top: 0;
+  padding-bottom: 0;
+}

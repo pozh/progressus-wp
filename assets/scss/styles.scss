@@ -41,8 +41,8 @@
     margin: 0 5px 5px 0;
     width: 32px;
     height: 32px;
-    background: $color-action;
-    border: 2px solid $color-action;
+    background: $primary;
+    border: 2px solid $primary;
     border-radius: 50%;
     text-align: center;
   }
@@ -53,7 +53,7 @@
   a:hover, a.active {
     background: $bg-body;
     i {
-      color: $color-action;
+      color: $primary;
     }
   }
 }
@@ -64,22 +64,11 @@
 #social {
   margin-top: 50px;
   margin-bottom: 50px;
-}
 
-#social .wrapper {
-  width: 340px;
-  margin: 0 auto;
-}
-
-.opaque {
-  background: $bg-body;
-  position: relative;
-  z-index: 100;
-}
-
-// Paddings
-.paddingall {
-  padding: 30px 40px 0 40px;
+  .wrapper {
+    width: 340px;
+    margin: 0 auto;
+  }
 }
 
 // Toggler (monthly/yearly pricing tab control for example)
@@ -121,19 +110,39 @@
 /*************************************************************************
                         Section-specific styles
 **************************************************************************/
-.section {
-  margin: 40px 0 60px 0;
-  @media (max-width: 480px) {
-    margin: 20px 0 40px 0;
-  }
-}
 
 /* Section Team
 *******************************/
-.people-list__photo {
+.person-photo,
+.elementor .person-photo{
   border-radius: 50%;
   @extend .img-fluid;
   border: 5px solid darken($bg-accent, 4%);
+}
+
+
+.person-social {
+  display: block;
+  margin-top: 7px;
+  font-size: 14px;
+  color: lighten($body-color, 40%);
+  margin-bottom: 1rem;
+
+  a {
+    color: lighten($body-color, 40%);
+    text-decoration: none;
+  }
+  a:hover {
+    color: $primary;
+  }
+}
+
+.person-about {
+  display: block;
+  margin-top: 7px;
+  font-size: 14px;
+  color: $color-accent;
+  font-weight: bold;
 }
 
 
@@ -187,7 +196,7 @@
     }
     .source .title {
       font-size: 16px;
-      color: $color-text;
+      color: $body-color;
     }
     @media (max-width: 480px) {
       div {
@@ -230,27 +239,6 @@
 }
 
 /* About */
-.person-social {
-  display: block;
-  margin-top: 7px;
-  font-size: 14px;
-  color: lighten($color-text, 40%);
-  a {
-    color: lighten($color-text, 40%);
-    text-decoration: none;
-  }
-  a:hover {
-    color: $color-action-hover;
-  }
-}
-
-.person-about {
-  display: block;
-  margin-top: 7px;
-  font-size: 14px;
-  color: $color-accent;
-  font-weight: bold;
-}
 
 /* Section "features" and similar ones, with icons on the side
 **************************************************************************/
@@ -281,7 +269,7 @@
       position: absolute;
       bottom: 0;
       display: block;
-      border-bottom: 1px dotted $color-action;
+      border-bottom: 1px dotted $primary;
       width: 50px;
     }
   }

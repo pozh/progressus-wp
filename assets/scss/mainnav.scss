@@ -8,9 +8,6 @@
     background: transparent;
     padding-top: 15px;
 
-    .navbar-nav > li > a {
-      color: rgba($white, .8);
-    }
   }
 
   .navbar-nav {
@@ -21,7 +18,7 @@
     }
     > li > a,
     > .open ul > a {
-      color: lighten($color-text, 10%);
+      color: rgba($white, .8);
       background: none;
     }
 
@@ -29,9 +26,24 @@
     > li > a:focus,
     > .open > a:hover,
     > .open > a:focus,
-    > .active > a {
+    > .current-menu-item > a {
       background: none;
-      color: $color-action;
+      color: $white;
+    }
+
+    > .current-menu-item > a {
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -2px;
+        left: 12%;
+        width: 76%;
+        height: 4px;
+        background: $primary;
+      }
     }
 
     .dropdown-menu {
@@ -40,7 +52,7 @@
       -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
       > li > a {
-        color: $color-text;
+        color: $body-color;
         padding: 7px 20px;
       }
       > li > a:hover,
@@ -49,14 +61,14 @@
       > .active > a,
       > .active > a:focus {
         background: none;
-        color: $color-action;
+        color: $primary;
       }
     }
   }
 
   .navbar-brand {
     font-size: 24px;
-    color: $color-text;
+    color: $body-color;
     height: auto;
 
     img {

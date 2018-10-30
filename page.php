@@ -15,7 +15,7 @@
 get_header();
 get_template_part('template-parts/header', 'page');
 
-$content_class = is_active_sidebar('sidebar-1') ? 'main-content' : '';
+$content_class = is_active_sidebar('sidebar-1') ? 'main-content' : 'col-12';
 ?>
 
 <div id="primary" class="content-area container mt-5 page-content">

@@ -10,50 +10,58 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+    <header class="entry-header">
 		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
+		if ( ! is_singular() ) :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				progressus_posted_on();
-				progressus_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php progressus_post_thumbnail(); ?>
+		?>
+            <div class="entry-meta">
+                <?php
+                    progressus_posted_on();
+                    progressus_posted_by();
+                ?>
+            </div>
+        <?php endif; ?>
+	</header>
 
 	<div class="entry-content">
+	    <?php
+        progressus_post_thumbnail();
+
+        if ( progressus_show_excerpt() ) : ?>
+
+            <div class="entry-summary" itemprop="text">
+                <?php the_excerpt(); ?>
+            </div>
+
+        <?php else : ?>
+
+            <div class="entry-content" itemprop="text">
+                <?php
+                the_content();
+
+                wp_link_pages( array(
+                'before' => '<div class="page-links">' . __( 'Pages:', 'progressus' ),
+                'after'  => '</div>',
+                ) );
+                ?>
+            </div>
+
 		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'progressus' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
+        endif;
 
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'progressus' ),
 			'after'  => '</div>',
 		) );
 		?>
-	</div><!-- .entry-content -->
+	</div>
 
-	<footer class="entry-footer">
-		<?php progressus_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+    <?php printf('<p class="more-link"><a href="%s">%s</a></p>',
+        esc_url(get_permalink()), __('Continue reading', 'progressus')); ?>
+
+<!--	<footer class="entry-footer">-->
+        <?php //progressus_entry_footer(); ?>
+<!--	</footer>-->
+
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -45,9 +45,7 @@ if ( ! function_exists( 'progressus_posted_by' ) ) :
 			esc_html_x( 'by %s', 'post author', 'progressus' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
-
 		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
-
 	}
 endif;
 
@@ -128,7 +126,7 @@ if ( ! function_exists( 'progressus_post_thumbnail' ) ) :
 
 			<div class="post-thumbnail">
 				<?php the_post_thumbnail(); ?>
-			</div><!-- .post-thumbnail -->
+			</div>
 
 		<?php else : ?>
 

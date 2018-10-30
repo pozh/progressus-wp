@@ -13,47 +13,42 @@
  */
 
 get_header();
+
 ?>
+    <header class="entry-header hero"
+            style="background-image: url(<?php echo get_header_image(); ?>); background-size: cover;">
+        <div class="container">
+            <h1 class="page-title text-center">
+                <?php bloginfo('name'); ?>
+                <small><?php bloginfo('description'); ?></small>
+            </h1>
+        </div>
+    </header>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+    <div id="primary" class="content-area container my-7 ">
+        <main id="main" class="site-main">
 
-		<?php
-		if ( have_posts() ) :
+            <?php
+            if (have_posts()) :
+                while (have_posts()) :
+                    the_post();
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
+                    /**
+                     * Include the Post-Type-specific template for the content.
+                     * If you want to override this in a child theme, then include a file
+                     * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+                     */
+                    get_template_part('template-parts/content', get_post_type());
+                endwhile;
+                the_posts_navigation();
+            else :
+                get_template_part('template-parts/content', 'none');
+            endif;
+            ?>
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+        </main><!-- #main -->
+    </div><!-- #primary -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

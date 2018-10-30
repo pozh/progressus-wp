@@ -48,7 +48,7 @@ class progressusCustomHeader
     public function meta_box_callback($post)
     {
         wp_nonce_field('customheader_data', 'customheader_nonce');
-        echo 'Allow you to add custom header in every page';
+        echo 'Allow you to add custom header in singular pages and blog posts';
         $this->field_generator($post);
     }
 

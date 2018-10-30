@@ -1,15 +1,18 @@
+<?php $post_id = get_the_ID(); ?>
 <header class="entry-header hero"
-        style="background-image: url(<?php echo get_post_meta( $post->ID, 'post_imageheader', true);?>); background-size: cover;">
+        style="background-image: url(<?php echo get_post_meta( $post_id, 'post_imageheader', true);?>); background-size: cover;">
     <div class="container">
-        <?php
-        if ( 'post' === get_post_type() ) :
-        ?>
-        <div class="entry-meta">
+        <h1 class="page-title text-center">
             <?php
-            progressus_posted_on();
-            progressus_posted_by();
+            echo get_the_title($post_id);
+            if (!empty($post_caption)) echo "<small>$post_caption</small>";
             ?>
-        </div><!-- .entry-meta -->
-        <?php endif; ?>
+        </h1>
+        <div class="entry-meta">
+            <?php /*
+            progressus_posted_on();
+            progressus_posted_by();*/
+            ?>
+        </div>
     </div>
 </header>

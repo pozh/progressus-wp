@@ -11,29 +11,28 @@ get_header();
 get_template_part('template-parts/header', 'blog');
 ?>
 
-	<div id="primary" class="content-area container mt-5">
-		<main id="main" class="site-main">
+<div id="primary" class="content-area container my-5">
+    <main id="main" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-            the_title('<h1 class="post-title">', '</h1>');
-			the_post();
-			get_template_part( 'template-parts/content', get_post_type() );
-			the_post_navigation();
+    <?php
+    while ( have_posts() ) :
+        the_post();
+        get_template_part( 'template-parts/content', get_post_type() );
+//			the_post_navigation();
 
-			/**
-             * If comments are open or we have at least one comment,
-             * load up the comment template.
-             */
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+        /**
+         * If comments are open or we have at least one comment,
+         * load up the comment template.
+         */
+        if ( comments_open() || get_comments_number() ) :
+            comments_template();
+        endif;
 
-		endwhile;
-		?>
+    endwhile;
+    ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+    </main>
+</div>
 
 <?php
 //get_sidebar();

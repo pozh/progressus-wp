@@ -39,16 +39,12 @@
     .current-menu-item > a {
       position: relative;
       color: $primary;
-
-      &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: -2px;
-        left: 12%;
-        width: 76%;
-        height: 4px;
-        background: $primary;
+      @include media-breakpoint-up(lg) {
+        border-bottom: 4px solid $primary;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: $navbar-nav-link-padding-x;
+        margin-right: $navbar-nav-link-padding-x;
       }
     }
 

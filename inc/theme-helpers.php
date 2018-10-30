@@ -33,3 +33,26 @@ if (!function_exists('progressus_show_excerpt')) {
         return $show_excerpt;
     }
 }
+
+if (!function_exists('progressus_comments_title')) {
+    /**
+     * Return caption for the Comments section,
+     * based on the given number of comments
+     */
+    function progressus_comments_title($comment_count) {
+        if ( '1' === $comment_count ) {
+            printf(
+            /* translators: 1: title. */
+                esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'progressus' ),
+                '<span>' . get_the_title() . '</span>'
+            );
+        } else {
+            printf( // WPCS: XSS OK.
+            /* translators: 1: comment count number, 2: title. */
+                esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'progressus' ) ),
+                number_format_i18n( $comment_count ),
+                '<span>' . get_the_title() . '</span>'
+            );
+        }
+    }
+}

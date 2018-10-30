@@ -20,31 +20,11 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
-
-	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-		?>
-		<h2 class="comments-title">
-			<?php
-			$progressus_comment_count = get_comments_number();
-			if ( '1' === $progressus_comment_count ) {
-				printf(
-					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'progressus' ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			} else {
-				printf( // WPCS: XSS OK.
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $progressus_comment_count, 'comments title', 'progressus' ) ),
-					number_format_i18n( $progressus_comment_count ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			}
-			?>
-		</h2><!-- .comments-title -->
+<div id="comments" class="comments-area mt-5">
+	<?php if ( have_comments() ) : ?>
+		<h4 class="comments-title mb-4">
+			<?php progressus_comments_title(get_comments_number()); ?>
+		</h4>
 
 		<?php the_comments_navigation(); ?>
 
@@ -69,7 +49,7 @@ if ( post_password_required() ) {
 
 	endif; // Check for have_comments().
 
-	comment_form();
+//	comment_form();
 	?>
 
-</div><!-- #comments -->
+</div>

@@ -54,7 +54,6 @@
   background: $bg-head;
   color: $color-head;
   background-size: cover;
-  background-attachment: fixed;
 
   .page-title {
     font-family: $font-head;
@@ -96,7 +95,7 @@
 }
 
 .home .hero {
-  min-height: 450px;
+  min-height: 500px;
 }
 
 /* Simple page title */

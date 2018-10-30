@@ -1,4 +1,4 @@
-$white:    #fff;
+$white: #fff;
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;
@@ -8,7 +8,7 @@ $gray-600: #6c757d;
 $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
-$black:    #000;
+$black: #000;
 
 // Color Scheme
 $bg-body: $white;
@@ -81,3 +81,6 @@ $spacers: map-merge((
 // BUTTONS
 $input-btn-padding-y-lg: .65rem;
 $input-btn-padding-x-lg: 3.8rem;
+
+// Jumbotron
+$jumbotron-bg: $gray-100;

@@ -28,6 +28,36 @@ p:last-child {
   }
 }
 
+.btn-rounded {
+  border-radius: 20px;
+}
+
+
+// Helpers
+
+// Toggler (monthly/yearly pricing tab control for example)
+.toggler {
+  li {
+    margin: 0 0 7px 0;
+  }
+  li.active {
+    display: none;
+  }
+}
+
+.inline-toggler {
+  li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+  li.active {
+    display: none;
+  }
+}
+
+
+
 // ELEMENTOR
 .elementor-section {
   margin: 25px 0;

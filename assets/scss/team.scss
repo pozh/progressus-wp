@@ -1,0 +1,21 @@
+.person-photo{
+  border-radius: 50% !important;
+  @extend .img-fluid;
+  border: 5px solid darken($bg-accent, 4%) !important;;
+}
+
+.person-social {
+  display: block;
+  margin-top: 7px;
+  font-size: 14px;
+  color: $gray-400;
+  margin-bottom: 1rem;
+
+  a {
+    color: $gray-400;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $primary;
+  }
+}

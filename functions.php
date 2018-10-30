@@ -198,3 +198,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Load Helpers
+ */
+require get_template_directory() . '/inc/theme-helpers.php';

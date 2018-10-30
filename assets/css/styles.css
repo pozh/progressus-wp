@@ -7196,21 +7196,22 @@ label {
   clear: both; }
 
 #comments .avatar {
-  float: left;
+  position: absolute;
   width: 70px;
   height: 70px;
+  left: -90px;
+  top: 0;
   margin-bottom: 30px;
   border: 5px solid #f8f9fa;
   border-radius: 50%;
   background-clip: padding-box; }
 
-#comments .children {
-  margin: 0 0 0 90px; }
-
 #comments .comment-meta {
-  margin: 0 0 0 90px; }
+  color: #6c757d;
+  font-size: 0.875rem;
+  margin-bottom: 1rem; }
   #comments .comment-meta a {
-    color: #343a40; }
+    color: #6c757d; }
   #comments .comment-meta a:hover {
     color: #DA4453; }
   #comments .comment-meta .author {
@@ -7222,6 +7223,7 @@ label {
     float: right; }
 
 #comments .comment-body {
+  position: relative;
   margin: 10px 0 35px 90px; }
 
 #comments .comment-navigation {
@@ -7237,7 +7239,7 @@ label {
     text-align: right;
     margin: 15px 0 0 0; }
 
-@media (max-width: 480px) {
+@media (max-width: 767.98px) {
   #comments .avatar {
     width: 50px;
     height: 50px;
@@ -7586,15 +7588,13 @@ p:last-child {
   .navbar .navbar-nav .current-menu-item > a {
     position: relative;
     color: #DA4453; }
-    .navbar .navbar-nav .current-menu-item > a:after {
-      content: '';
-      display: block;
-      position: absolute;
-      bottom: -2px;
-      left: 12%;
-      width: 76%;
-      height: 4px;
-      background: #DA4453; }
+    @media (min-width: 992px) {
+      .navbar .navbar-nav .current-menu-item > a {
+        border-bottom: 4px solid #DA4453;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem; } }
   .navbar .navbar-nav .dropdown-menu {
     font-size: 13px;
     border-radius: 0px;

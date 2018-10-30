@@ -110,9 +110,11 @@
     clear: both;
   }
   .avatar {
-    float: left;
+    position: absolute;
     width: 70px;
     height: 70px;
+    left: -90px;
+    top: 0;
     margin-bottom: 30px;
     border: 5px solid $bg-accent;
     border-radius: 50%;
@@ -120,12 +122,18 @@
     background-clip: padding-box;
   }
   .children {
-    margin: 0 0 0 90px;
+    //margin: 0 0 0 90px;
   }
   .comment-meta {
-    margin: 0 0 0 90px;
+    color: $gray-600;
+    font-size: $font-size-sm;
+    margin-bottom: $spacer;
+
+    .comment-author {
+    }
+
     a {
-      color: $body-color;
+      color: $gray-600;
     }
     a:hover {
       color: $primary;
@@ -142,6 +150,7 @@
     }
   }
   .comment-body {
+    position: relative;
     margin: 10px 0 35px 90px;
   }
   .comment-navigation {
@@ -160,7 +169,7 @@
     }
   }
 
-  @media (max-width: 480px) {
+  @include media-breakpoint-down(sm) {
     .avatar {
       width: 50px;
       height: 50px;

@@ -52,8 +52,8 @@ if ( ! function_exists( 'progressus_header_style' ) ) :
 		// Has the text been hidden?
 		if ( ! display_header_text() ) :
 			?>
-			.site-title,
-			.site-description {
+			.hero .page-title,
+            .hero .page-title small {
 				position: absolute;
 				clip: rect(1px, 1px, 1px, 1px);
 			}
@@ -61,8 +61,8 @@ if ( ! function_exists( 'progressus_header_style' ) ) :
 		// If the user has set a custom color for the text use that.
 		else :
 			?>
-			.site-title a,
-			.site-description {
+            .hero .page-title,
+            .hero .page-title small {
 				color: #<?php echo esc_attr( $header_text_color ); ?>;
 			}
 		<?php endif; ?>
